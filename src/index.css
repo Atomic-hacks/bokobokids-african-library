@@ -8,35 +8,54 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* African-inspired pastel color palette */
+    --background: 48 100% 98%;
+    --foreground: 25 20% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 48 50% 96%;
+    --card-foreground: 25 20% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 48 100% 98%;
+    --popover-foreground: 25 20% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 200 80% 75%; /* Light blue */
+    --primary-foreground: 25 20% 15%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 320 60% 85%; /* Light pink */
+    --secondary-foreground: 25 20% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 45 100% 85%; /* Light yellow */
+    --muted-foreground: 25 15% 40%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 30 45% 80%; /* Light brown */
+    --accent-foreground: 25 20% 15%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --heritage: 25 35% 65%; /* Warm earth tone */
+    --heritage-foreground: 48 100% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --community: 260 60% 75%; /* Soft purple */
+    --community-foreground: 25 20% 15%;
 
-    --radius: 0.5rem;
+    --wisdom: 40 70% 70%; /* Golden */
+    --wisdom-foreground: 25 20% 15%;
+
+    --destructive: 0 65% 70%;
+    --destructive-foreground: 48 100% 98%;
+
+    --border: 45 40% 88%;
+    --input: 45 40% 90%;
+    --ring: 200 80% 75%;
+
+    --radius: 1rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    --gradient-wisdom: linear-gradient(135deg, hsl(var(--heritage)), hsl(var(--wisdom)));
+    --gradient-community: linear-gradient(135deg, hsl(var(--community)), hsl(var(--primary)));
+
+    /* Animations */
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
