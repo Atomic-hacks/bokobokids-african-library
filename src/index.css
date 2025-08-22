@@ -18,23 +18,24 @@ All colors MUST be HSL.
     --popover: 48 100% 98%;
     --popover-foreground: 25 20% 15%;
 
-    --primary: 200 80% 75%; /* Light blue */
-    --primary-foreground: 25 20% 15%;
-
-    --secondary: 320 60% 85%; /* Light pink */
-    --secondary-foreground: 25 20% 15%;
-
-    --muted: 45 100% 85%; /* Light yellow */
-    --muted-foreground: 25 15% 40%;
-
-    --accent: 30 45% 80%; /* Light brown */
-    --accent-foreground: 25 20% 15%;
-
-    --heritage: 25 35% 65%; /* Warm earth tone */
-    --heritage-foreground: 48 100% 98%;
-
-    --community: 260 60% 75%; /* Soft purple */
-    --community-foreground: 25 20% 15%;
+      --primary: 26 51% 45%;   /* Cyan / Teal (from "X") */
+      --primary-foreground: 48 100% 98%;
+    
+      --secondary: 354 92% 85%; /* Light pink (from "B") */
+      --secondary-foreground: 25 20% 15%;
+    
+      --muted: 60 99% 73%;      /* Light yellow (from "O") */
+      --muted-foreground: 25 15% 40%;
+    
+      --accent:  170 98% 48%;     /* Orange (from "O") */
+      --accent-foreground: 25 20% 15%;
+    
+      --heritage: 35 79% 64%  ;   /* Brown (from "O") */
+      --heritage-foreground: 25 20% 15%  ;
+    
+      --community: 0 0% 100%;   /* White background */
+      --community-foreground: 25 20% 15%;
+      
 
     --wisdom: 40 70% 70%; /* Golden */
     --wisdom-foreground: 25 20% 15%;

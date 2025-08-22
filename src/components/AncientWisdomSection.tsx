@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
-import { Drama, Palette, Music, Sparkles } from 'lucide-react';
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef, useState } from "react";
+import { Drama, Palette, Music, Sparkles } from "lucide-react";
 
 const AncientWisdomSection = () => {
   const ref = useRef(null);
@@ -13,17 +13,17 @@ const AncientWisdomSection = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const cardVariants = {
     hidden: { opacity: 0, rotateY: 90 },
     visible: {
       opacity: 1,
-      rotateY: 0
-    }
+      rotateY: 0,
+    },
   };
 
   const cards = [
@@ -31,53 +31,60 @@ const AncientWisdomSection = () => {
       icon: Drama,
       title: "Sacred Masks & Sculptures",
       emoji: "🎭",
-      description: "Discover the spiritual significance and artistic mastery of traditional African masks and sculptures",
+      description:
+        "Discover the spiritual significance and artistic mastery of traditional African masks and sculptures",
       gradient: "from-heritage to-wisdom",
-      bgPattern: "geometric"
+      bgPattern: "geometric",
     },
     {
       icon: Palette,
       title: "Traditional Pottery & Crafts",
       emoji: "🏺",
-      description: "Learn the ancient techniques and cultural stories behind beautiful African pottery and crafts",
+      description:
+        "Learn the ancient techniques and cultural stories behind beautiful African pottery and crafts",
       gradient: "from-accent to-secondary",
-      bgPattern: "circular"
+      bgPattern: "circular",
     },
     {
       icon: Music,
       title: "Musical Instruments",
       emoji: "🎵",
-      description: "Explore the rhythms and melodies that have carried African stories for generations",
+      description:
+        "Explore the rhythms and melodies that have carried African stories for generations",
       gradient: "from-primary to-community",
-      bgPattern: "wave"
+      bgPattern: "wave",
     },
     {
       icon: Sparkles,
       title: "African Patterns",
       emoji: "✨",
-      description: "Understand the symbolic meanings and mathematical beauty of traditional African patterns",
+      description:
+        "Understand the symbolic meanings and mathematical beauty of traditional African patterns",
       gradient: "from-muted to-accent",
-      bgPattern: "diamond"
-    }
+      bgPattern: "diamond",
+    },
   ];
 
   const getPatternStyles = (pattern: string) => {
     switch (pattern) {
-      case 'geometric':
-        return 'repeating-linear-gradient(45deg, transparent, transparent 10px, currentColor 10px, currentColor 20px)';
-      case 'circular':
-        return 'radial-gradient(circle at 25% 25%, currentColor 2px, transparent 2px), radial-gradient(circle at 75% 75%, currentColor 2px, transparent 2px)';
-      case 'wave':
-        return 'repeating-linear-gradient(90deg, transparent, transparent 15px, currentColor 15px, currentColor 30px)';
-      case 'diamond':
-        return 'repeating-conic-gradient(from 0deg, transparent 0deg 45deg, currentColor 45deg 90deg, transparent 90deg 135deg, currentColor 135deg 180deg)';
+      case "geometric":
+        return "repeating-linear-gradient(45deg, transparent, transparent 10px, currentColor 10px, currentColor 20px)";
+      case "circular":
+        return "radial-gradient(circle at 25% 25%, currentColor 2px, transparent 2px), radial-gradient(circle at 75% 75%, currentColor 2px, transparent 2px)";
+      case "wave":
+        return "repeating-linear-gradient(90deg, transparent, transparent 15px, currentColor 15px, currentColor 30px)";
+      case "diamond":
+        return "repeating-conic-gradient(from 0deg, transparent 0deg 45deg, currentColor 45deg 90deg, transparent 90deg 135deg, currentColor 135deg 180deg)";
       default:
-        return '';
+        return "";
     }
   };
 
   return (
-    <section ref={ref} className="py-20 bg-gradient-to-b from-muted/20 to-background relative overflow-hidden">
+    <section
+      ref={ref}
+      className="py-20 bg-gradient-to-b from-muted/20 to-background relative overflow-hidden"
+    >
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 opacity-5">
         <motion.div
@@ -99,20 +106,23 @@ const AncientWisdomSection = () => {
           animate={isInView ? "visible" : "hidden"}
         >
           {/* Header */}
-          <motion.div 
+          {/* Header */}
+          <motion.div
             variants={cardVariants}
             className="text-center mb-16 max-w-4xl mx-auto"
           >
             <h2 className="text-5xl md:text-6xl font-bold font-fredoka text-foreground mb-6">
-              Ancient Wisdom
+              Cultural Heritage
             </h2>
             <p className="text-xl text-muted-foreground font-baloo leading-relaxed">
-              Connecting modern children to timeless African knowledge, traditions, and cultural treasures that have shaped civilizations for thousands of years.
+              Explore the rich tapestry of African cultural artifacts that tell
+              the stories of our ancestors and inspire the next generation of
+              global citizens.
             </p>
           </motion.div>
 
           {/* Cards Grid */}
-          <motion.div 
+          <motion.div
             variants={containerVariants}
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12"
           >
@@ -120,33 +130,35 @@ const AncientWisdomSection = () => {
               <motion.div
                 key={card.title}
                 variants={cardVariants}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   rotateY: 5,
-                  transition: { duration: 0.3 }
+                  transition: { duration: 0.3 },
                 }}
                 onHoverStart={() => setHoveredCard(index)}
                 onHoverEnd={() => setHoveredCard(null)}
                 className="group perspective-1000"
               >
-                <div className={`relative bg-gradient-to-br ${card.gradient} rounded-3xl p-8 h-80 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer`}>
+                <div
+                  className={`relative bg-gradient-to-br ${card.gradient} rounded-3xl p-8 h-80 overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer`}
+                >
                   {/* Background Pattern */}
-                  <div 
+                  <div
                     className="absolute inset-0 opacity-10"
                     style={{
                       backgroundImage: getPatternStyles(card.bgPattern),
-                      backgroundSize: '30px 30px'
+                      backgroundSize: "30px 30px",
                     }}
                   />
-                  
+
                   {/* Card Content */}
                   <div className="relative z-10 h-full flex flex-col">
                     {/* Icon and Emoji */}
                     <div className="flex items-center justify-between mb-6">
                       <motion.div
-                        animate={{ 
+                        animate={{
                           rotate: hoveredCard === index ? 360 : 0,
-                          scale: hoveredCard === index ? 1.1 : 1
+                          scale: hoveredCard === index ? 1.1 : 1,
                         }}
                         transition={{ duration: 0.6 }}
                         className="w-12 h-12 bg-background/20 backdrop-blur-sm rounded-xl flex items-center justify-center"
@@ -169,7 +181,7 @@ const AncientWisdomSection = () => {
                     {/* Hover Effect Indicator */}
                     <motion.div
                       initial={{ width: 0 }}
-                      animate={{ width: hoveredCard === index ? '100%' : '0%' }}
+                      animate={{ width: hoveredCard === index ? "100%" : "0%" }}
                       transition={{ duration: 0.3 }}
                       className="h-1 bg-background/40 rounded-full mt-4"
                     />
@@ -177,19 +189,26 @@ const AncientWisdomSection = () => {
 
                   {/* Animated Corner Elements */}
                   <motion.div
-                    animate={{ 
+                    animate={{
                       scale: hoveredCard === index ? [1, 1.2, 1] : 1,
-                      rotate: hoveredCard === index ? [0, 180, 360] : 0
+                      rotate: hoveredCard === index ? [0, 180, 360] : 0,
                     }}
-                    transition={{ duration: 2, repeat: hoveredCard === index ? Infinity : 0 }}
+                    transition={{
+                      duration: 2,
+                      repeat: hoveredCard === index ? Infinity : 0,
+                    }}
                     className="absolute top-4 right-4 w-6 h-6 border-2 border-background/30 rounded-full"
                   />
                   <motion.div
-                    animate={{ 
+                    animate={{
                       scale: hoveredCard === index ? [1, 1.1, 1] : 1,
-                      rotate: hoveredCard === index ? [0, -90, -180] : 0
+                      rotate: hoveredCard === index ? [0, -90, -180] : 0,
                     }}
-                    transition={{ duration: 1.5, repeat: hoveredCard === index ? Infinity : 0, delay: 0.5 }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: hoveredCard === index ? Infinity : 0,
+                      delay: 0.5,
+                    }}
                     className="absolute bottom-4 left-4 w-4 h-4 bg-background/20 rounded-full"
                   />
                 </div>
@@ -198,10 +217,7 @@ const AncientWisdomSection = () => {
           </motion.div>
 
           {/* Living Heritage Text */}
-          <motion.div
-            variants={cardVariants}
-            className="text-center"
-          >
+          <motion.div variants={cardVariants} className="text-center">
             <div className="inline-block bg-gradient-wisdom rounded-2xl px-8 py-4 shadow-lg">
               <h3 className="text-2xl font-bold font-fredoka text-heritage-foreground">
                 Living Heritage

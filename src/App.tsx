@@ -8,6 +8,9 @@ import NotFound from "./pages/NotFound";
 import StoryQuestPage from "./pages/storyquest/Index";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import AboutPage from "./pages/about";
+import ContactPage from "./pages/contact";
+import VillageComponent from "./pages/village";
 
 const queryClient = new QueryClient();
 
@@ -21,7 +24,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/storyquest" element={<StoryQuestPage />} />
+          <Route path="/about" element={<AboutPage />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/village" element={<VillageComponent />} />
         </Routes>
         <Footer />
       </BrowserRouter>
